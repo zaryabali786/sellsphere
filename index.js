@@ -217,6 +217,8 @@ app.get("/", (req, res) =>{
     res.status(200).json({ message: "App is running."})
 })
 
+// require('./jobs/subscription.js'); 
+
 const activeUsers = new Map(); // Tracks currently active users
 const activeSessions = new Set(); // Tracks all-time unique sessions
 

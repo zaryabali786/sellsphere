@@ -40,7 +40,11 @@ const userSchema = new mongoose.Schema({
     country: {
         type: String,
         default: ''
-    }
+    },
+    isVerified: { type: Boolean, default: false },
+    verificationToken: String,
+    subscriptionEndDate: { type: Date }, // When the subscription ends
+    paymentStatus: { type: Boolean, default: false }, // Paid or not
 
 });
 

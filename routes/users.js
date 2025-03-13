@@ -150,5 +150,19 @@ router.get(`/get/count`, async (req, res) =>{
     });
 })
 
+router.post('/pay', async (req, res) => {
+    const user = await User.findById(req.body.userId);
+    if (!user) return res.status(404).send('User not found');
+
+    const newExpiryDate = new Date();
+    newExpiryDate.setDate(newExpiryDate.getDate() + 30);
+
+    user.subscriptionEndDate = newExpiryDate;
+    user.paymentStatus = true;
+    await user.save();
+
+    res.send('Payment successful. Subscription extended for 30 days.');
+});
+
 
 module.exports =router;
