@@ -159,6 +159,87 @@ const order = [
 ];
 
 
+const pages = [
+    {
+        name: 'title',
+        show: true,
+        type: 'varchar',
+        length: '50',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+    {
+        name: 'route',
+        show: true,
+        type: 'varchar',
+        length: '1000',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+
+    {
+        name: 'ACTIONS',
+        show: true,
+        type: 'icons',
+        length: '',
+        isFilterable: false,
+        sortable: false,
+        width: 100,
+        minWidth: 100
+    }
+];
+const menu = [
+    {
+        name: 'title',
+        show: true,
+        type: 'varchar',
+        length: '50',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+    {
+        name: 'type',
+        show: true,
+        type: 'varchar',
+        length: '1000',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+    {
+        name: 'link',
+        show: true,
+        type: 'varchar',
+        length: '1000',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+    {
+        name: 'submenus',
+        show: true,
+        type: 'submenus',
+        length: '1000',
+        width: 100,
+        minWidth: 100,
+        sortable: true
+    },
+
+    {
+        name: 'ACTIONS',
+        show: true,
+        type: 'icons',
+        length: '',
+        isFilterable: false,
+        sortable: false,
+        width: 100,
+        minWidth: 100
+    }
+];
+
 const tailor = [
     {
         name: 'Image',
@@ -210,4 +291,4 @@ const tailor = [
     }
 ];
 
-module.exports = { category, product, order ,tailor};
+module.exports = { category, product, order ,tailor,pages,menu};

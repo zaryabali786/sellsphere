@@ -187,8 +187,13 @@ const tailorsRoute = require('./routes/tailor');
 const commentRoutes = require('./routes/comments');
 const userVisitsRoutes = require('./routes/uservisit');
 const themeRoutes = require('./routes/themeCustomization');
+const pages = require('./routes/pages');
+const menues = require('./routes/menu');
+
+
 
 const api = process.env.API_URL;
+
 
 app.use(`${api}/categories`, categoriesRoutes);
 app.use(`${api}/products`, productsRoutes);
@@ -198,6 +203,11 @@ app.use(`${api}/orders`, ordersRoutes);
 app.use(`${api}/tailors`, tailorsRoute);
 app.use(`${api}/theme`, themeRoutes);
 app.use(`${api}/visitor`, userVisitsRoutes); // Use the new route
+app.use(`${api}/pages`, pages);
+app.use(`${api}/menu`, menues);
+
+
+
 
 // Database Connection
 mongoose

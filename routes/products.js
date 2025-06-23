@@ -102,6 +102,7 @@ router.get(`/getAllProducts`, async (req, res) => {
                 Image: data.image ?? '',
                 category: data.category?.name ?? '',
                 categoryId: data.category?.id ?? '',
+                ...data._doc,
             };
         });
 
